@@ -1,6 +1,6 @@
 require 'rock_paper_scissors'
 
-describe RockPaperScissors, :pending => true do
+describe RockPaperScissors do
   before(:each) do
     @rock = ['Armando','R'] ; @paper = ['Dave','P'] ; @scissors = ['Sam','S']
   end
@@ -10,6 +10,9 @@ describe RockPaperScissors, :pending => true do
     end
     it 'scissors cut paper [10 points]' do
       RockPaperScissors.winner(@paper, @scissors).should == @scissors
+    end
+    it 'scissors cut paper reversed [10 points]' do
+      RockPaperScissors.winner(@scissors, @paper).should == @scissors
     end
     it 'paper covers rock [10 points]' do
       RockPaperScissors.winner(@rock, @paper).should == @paper
