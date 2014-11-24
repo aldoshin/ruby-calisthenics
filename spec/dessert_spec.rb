@@ -1,6 +1,6 @@
 require 'dessert'
 
-describe Dessert, :pending => true do
+describe Dessert do
   describe 'cake' do
     before :each do
       @subject = Dessert.new('cake', 400)
@@ -42,7 +42,7 @@ describe Dessert, :pending => true do
   end
 end
 
-describe JellyBean, :pending => true do
+describe JellyBean do
   describe 'when non-licorice' do
     before :each do
       @subject = JellyBean.new('vanilla')
